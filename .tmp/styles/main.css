@@ -1,0 +1,130 @@
+html * {
+  margin: 0;
+  vertical-align: top; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #333; }
+
+.header {
+  height: 40px;
+  width: 100%;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(#f9f9f9, #f3f3f3);
+  background-repeat: repeat-x;
+  text-shadow: 0 1px 0 #fff;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px; }
+  .header a {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.1s ease-in; }
+    .header a:hover {
+      color: #4183c4; }
+
+.main-container {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -10px;
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto; }
+
+.sidebar {
+  text-align: left;
+  min-height: 500px;
+  width: 230px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  clear: both;
+  margin-right: -4px; }
+
+.profile-pic {
+  height: 230px;
+  width: 230px;
+  border-radius: 6px;
+  margin: 5px; }
+
+.real-name {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 30px; }
+
+.user-name {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+  margin-bottom: 15px; }
+
+.where-when {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.7;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee; }
+
+.loc-image {
+  margin: 2px 5px 0 3px; }
+
+.clock-image {
+  margin: 3px 5px 0 1px; }
+
+.first, .second, .third {
+  text-align: center;
+  width: 74px;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 0 15px 0; }
+  .first div, .second div, .third div {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1; }
+  .first a, .second a, .third a {
+    font-size: 11px;
+    color: #999;
+    text-decoration: none; }
+  .first :hover, .second :hover, .third :hover {
+    color: #4183c4; }
+
+.three-numbers {
+  border-bottom: 1px solid #eeeeee; }
+
+.col3fourths {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 730px;
+  display: inline-block;
+  clear: both; }
+
+.repo-tab-content {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.repo-line {
+  text-align: left; }
+
+.repo-name {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #4183c4; }
+
+.repo-updated {
+  font-size: 11px;
+  color: #999999; }
+
+.repo-language {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #666; }

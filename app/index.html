@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>rebuild github</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header">
+          <img src="images/octocat-icon-big.png"></img>
+          <a href="https://github.com/explore">Explore</a>
+          <a href="https://gist.github.com">Gist</a>
+          <a href="https://github.com/blog">Blog</a>
+          <a href="https://help.github.com">Help</a>
+        </div>
+
+        <div class="main-container">
+            <div class="sidebar"></div>
+            <div class="col3fourths">
+                <div class="tab-names"></div>
+                <div class="repo-tab-content">
+
+                </div>  <!-- closes repoTabContent -->
+            </div> <!-- closes col3fourths -->
+        </div> <!-- closes mainContainer -->
+
+        <!-- SCRIPTS -->
+        <script type="text/template" class="showSidebar"> 
+            <img src= <%=avatar_url%> class="profile-pic"></img>
+            <div class="real-name"> <%= name %> </div>
+            <div class="user-name"> <%= login %> </div>
+            <div class="where-when">
+              <div class="where"> 
+                <img src="images/location-icon.png" class="loc-image"></img>
+                <%= location %> 
+              </div>
+              <div class="when-joined">
+                <img src="images/clock-icon.png" class="clock-image"></img>
+                <%= created_at %>
+              </div>
+            </div>
+            <div class="three-numbers">
+              <div class="first">
+                <div class="followers"> <%= followers %> </div>
+                <a href=<%= followers_url %> >Followers</a>
+              </div>
+              <div class="second">
+                <div class="starred"> 1 </div>
+                <a href=<%= starred_url %> >Starred</a>
+              </div>
+              <div class="third">
+                <div class="following"> <%= following %> </div>
+                <a href=<%= following_url %> >Following</a>
+              </div>
+            </div>
+        </script>
+
+        <script type="text/template" class="showRepos"> 
+          <div class="repo-line">
+            <div class="repo-name"> <%= name %> </div>
+            <div class="repo-description"> <%= description %> </div>
+            <div class="repo-updated"> <%= updated_at %> </div>
+            <div class="repo-language"> <%= language %> </div>
+            <div class="stars"> <%= stargazers_count %> </div>
+            <div class="forks"> <%= forks_count %> </div>
+          </div>
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
