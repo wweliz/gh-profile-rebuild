@@ -21,19 +21,27 @@ body {
     padding: 5px;
     font-size: 13px;
     font-weight: bold;
+    line-height: 40px;
     text-decoration: none;
     color: #333333;
     transition: color 0.1s ease-in; }
     .header a:hover {
       color: #4183c4; }
 
+.octocat {
+  width: 25px;
+  height: 25px;
+  padding-top: 8px; }
+
+.profile-pic-tiny {
+  height: 20px;
+  width: 20px; }
+
 .main-container {
-  text-align: center;
   padding-left: 10px;
   padding-right: 10px;
   margin-left: -10px;
   width: 1000px;
-  height: 500px;
   margin: 0 auto; }
 
 .sidebar {
@@ -97,7 +105,8 @@ body {
     color: #4183c4; }
 
 .three-numbers {
-  border-bottom: 1px solid #eeeeee; }
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 20px; }
 
 .col3fourths {
   padding-left: 10px;
@@ -107,17 +116,26 @@ body {
   clear: both; }
 
 .repo-tab-content {
+  width: 730px;
+  min-height: 66px;
   padding-left: 10px;
   padding-right: 10px; }
 
-.repo-line {
-  text-align: left; }
-
-.repo-name {
+.repo-line-top {
+  text-align: left;
+  border-top: 1px solid #eeeeee;
+  padding-top: 20px;
   font-size: 20px;
   font-weight: bold;
   line-height: 32px;
   color: #4183c4; }
+  .repo-line-top .book {
+    margin: 0 15px 58px 6px;
+    float: left; }
+  .repo-line-top .repo-name {
+    float: left; }
+  .repo-line-top .repo-stats {
+    float: right; }
 
 .repo-updated {
   font-size: 11px;

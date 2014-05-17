@@ -1,3 +1,16 @@
+// Header Info ////////////////////////////////////////////////////
+
+var showHeader = _.template($('.showHeader').text());
+
+function renderHeader (data, destination){
+    var rendered = showHeader(data);
+    destination.prepend(rendered);
+  }
+ 
+$.getJSON('https://api.github.com/users/wweliz').done(function(data){
+  renderHeader(data, $('.sidebar'));
+});
+
 // Repositories ////////////////////////////////////////////////////
 
 var showRepos = _.template($('.showRepos').text());

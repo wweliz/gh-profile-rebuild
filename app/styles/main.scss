@@ -38,6 +38,7 @@ body {
         padding: 5px;
         font-size: 13px;
         font-weight: bold;
+        line-height: 40px;
         text-decoration: none;
         color: #333333;
         transition: color 0.1s ease-in;
@@ -48,15 +49,22 @@ body {
     }
 }
 
+.octocat {
+    width: 25px;
+    height: 25px;
+    padding-top: 8px;
+}
 
+.profile-pic-tiny {
+    height: 20px;
+    width: 20px;
+}
 
 .main-container {
-    text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: -10px;
     width: 1000px;
-    height: 500px;
     margin: 0 auto;
 }
 
@@ -135,6 +143,7 @@ body {
 
 .three-numbers {
     border-bottom: 1px solid $lightestgray;
+    padding-bottom: 20px;
 
 }
 
@@ -147,19 +156,33 @@ body {
 }
 
 .repo-tab-content {
+    width: 730px;
+    min-height: 66px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.repo-line {
+.repo-line-top {
     text-align: left;
-}
-
-.repo-name {
+    border-top: 1px solid $lightestgray;
+    padding-top: 20px;
     font-size: 20px;
     font-weight: bold;
     line-height: 32px;
     color: #4183c4;
+
+    & .book {
+        margin: 0 15px 58px 6px;
+        float: left;
+    }
+
+    & .repo-name {
+        float: left;
+    }
+
+    & .repo-stats {
+        float: right;
+    }
 }
 
 .repo-updated {
@@ -173,3 +196,4 @@ body {
     line-height: 20px;
     color: #666;
 }
+
