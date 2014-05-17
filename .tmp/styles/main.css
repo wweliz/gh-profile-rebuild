@@ -17,6 +17,13 @@ body {
   text-shadow: 0 1px 0 #fff;
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 20px; }
+  .header .octocat {
+    width: 25px;
+    height: 25px;
+    padding-top: 8px; }
+  .header .profile-pic-tiny {
+    height: 20px;
+    width: 20px; }
   .header a {
     padding: 5px;
     font-size: 13px;
@@ -28,21 +35,14 @@ body {
     .header a:hover {
       color: #4183c4; }
 
-.octocat {
-  width: 25px;
-  height: 25px;
-  padding-top: 8px; }
-
-.profile-pic-tiny {
-  height: 20px;
-  width: 20px; }
-
 .main-container {
   padding-left: 10px;
   padding-right: 10px;
   margin-left: -10px;
   width: 1000px;
   margin: 0 auto; }
+  .main-container .tab-names {
+    padding-bottom: 10px; }
 
 .sidebar {
   text-align: left;
@@ -53,60 +53,51 @@ body {
   display: inline-block;
   clear: both;
   margin-right: -4px; }
-
-.profile-pic {
-  height: 230px;
-  width: 230px;
-  border-radius: 6px;
-  margin: 5px; }
-
-.real-name {
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 30px; }
-
-.user-name {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
-  color: #666;
-  margin-bottom: 15px; }
-
-.where-when {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 14px;
-  line-height: 1.7;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee; }
-
-.loc-image {
-  margin: 2px 5px 0 3px; }
-
-.clock-image {
-  margin: 3px 5px 0 1px; }
-
-.first, .second, .third {
-  text-align: center;
-  width: 74px;
-  text-align: center;
-  display: inline-block;
-  padding: 15px 0 15px 0; }
-  .first div, .second div, .third div {
-    font-size: 28px;
+  .sidebar .profile-pic {
+    height: 230px;
+    width: 230px;
+    border-radius: 6px;
+    margin: 5px; }
+  .sidebar .real-name {
+    font-size: 26px;
     font-weight: bold;
-    line-height: 1; }
-  .first a, .second a, .third a {
-    font-size: 11px;
-    color: #999;
-    text-decoration: none; }
-  .first :hover, .second :hover, .third :hover {
-    color: #4183c4; }
-
-.three-numbers {
-  border-bottom: 1px solid #eeeeee;
-  padding-bottom: 20px; }
+    line-height: 30px; }
+  .sidebar .user-name {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+    margin-bottom: 15px; }
+  .sidebar .where-when {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee; }
+    .sidebar .where-when .loc-image {
+      margin: 2px 5px 0 3px; }
+    .sidebar .where-when .clock-image {
+      margin: 3px 5px 0 1px; }
+  .sidebar .first, .sidebar .second, .sidebar .third {
+    text-align: center;
+    width: 74px;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 0 15px 0; }
+    .sidebar .first div, .sidebar .second div, .sidebar .third div {
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1; }
+    .sidebar .first a, .sidebar .second a, .sidebar .third a {
+      font-size: 11px;
+      color: #999;
+      text-decoration: none; }
+    .sidebar .first :hover, .sidebar .second :hover, .sidebar .third :hover {
+      color: #4183c4; }
+  .sidebar .three-numbers {
+    border-bottom: 1px solid #eeeeee; }
 
 .col3fourths {
   padding-left: 10px;
@@ -114,35 +105,34 @@ body {
   width: 730px;
   display: inline-block;
   clear: both; }
-
-.repo-tab-content {
-  width: 730px;
-  min-height: 66px;
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.repo-line-top {
-  text-align: left;
-  border-top: 1px solid #eeeeee;
-  padding-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 32px;
-  color: #4183c4; }
-  .repo-line-top .book {
-    margin: 0 15px 58px 6px;
-    float: left; }
-  .repo-line-top .repo-name {
-    float: left; }
-  .repo-line-top .repo-stats {
-    float: right; }
-
-.repo-updated {
-  font-size: 11px;
-  color: #999999; }
-
-.repo-language {
-  font-size: 11px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #666; }
+  .col3fourths .repo-tab-content {
+    width: 730px;
+    min-height: 66px; }
+    .col3fourths .repo-tab-content .repo-line-top {
+      text-align: left;
+      border-top: 1px solid #eeeeee;
+      min-height: 24px;
+      padding: 20px 0 14px 0; }
+      .col3fourths .repo-tab-content .repo-line-top .book {
+        margin: 0 15px 0 6px;
+        float: left; }
+      .col3fourths .repo-tab-content .repo-line-top .repo-name {
+        float: left;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 32px;
+        color: #4183c4; }
+        .col3fourths .repo-tab-content .repo-line-top .repo-name:hover {
+          text-decoration: underline; }
+      .col3fourths .repo-tab-content .repo-line-top .repo-stats div {
+        float: right;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 20px;
+        color: #666; }
+    .col3fourths .repo-tab-content .repo-line-bottom {
+      margin-left: 46px;
+      padding-bottom: 20px; }
+      .col3fourths .repo-tab-content .repo-line-bottom .repo-updated {
+        font-size: 11px;
+        color: #999999; }

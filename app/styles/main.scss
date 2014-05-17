@@ -34,6 +34,17 @@ body {
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 20px;
 
+    & .octocat {
+        width: 25px;
+        height: 25px;
+        padding-top: 8px;
+    }
+
+    & .profile-pic-tiny {
+        height: 20px;
+        width: 20px;
+    }
+
     & a {
         padding: 5px;
         font-size: 13px;
@@ -43,21 +54,8 @@ body {
         color: #333333;
         transition: color 0.1s ease-in;
 
-        &:hover {
-            color: #4183c4;
-        }
+        &:hover {color: #4183c4;}
     }
-}
-
-.octocat {
-    width: 25px;
-    height: 25px;
-    padding-top: 8px;
-}
-
-.profile-pic-tiny {
-    height: 20px;
-    width: 20px;
 }
 
 .main-container {
@@ -66,85 +64,81 @@ body {
     margin-left: -10px;
     width: 1000px;
     margin: 0 auto;
+
+    & .tab-names {
+      padding-bottom: 10px;
+    }
 }
 
 .sidebar {
-    text-align: left;
-    min-height: 500px;
-    width: 230px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: inline-block;
-    clear: both;
-    margin-right: -4px;
-}
+  text-align: left;
+  min-height: 500px;
+  width: 230px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  clear: both;
+  margin-right: -4px;
 
-.profile-pic {
-    height: 230px;
-    width: 230px;
-    border-radius: 6px;
-    margin: 5px;
-}
-.real-name {
-    font-size: 26px;
-    font-weight: bold;
-    line-height: 30px;
-}
+  & .profile-pic {
+      height: 230px;
+      width: 230px;
+      border-radius: 6px;
+      margin: 5px;
+  }
 
-.user-name {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 24px;
-    color: #666;
-    margin-bottom: 15px;
-}
+  & .real-name {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 30px;
+  }
 
-.where-when {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 14px;
-    line-height: 1.7;
-    border-top: 1px solid $lightestgray;
+  & .user-name {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px;
+      color: #666;
+      margin-bottom: 15px;
+  }
+
+  & .where-when {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 14px;
+      line-height: 1.7;
+      border-top: 1px solid $lightestgray;
+      border-bottom: 1px solid $lightestgray;
+
+      & .loc-image {margin: 2px 5px 0 3px;}
+      & .clock-image {margin: 3px 5px 0 1px;}
+  }
+
+  & .first, .second, .third {
+      & div {
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 1;
+      }
+
+      & a {
+          font-size: 11px;
+          color: #999;
+          text-decoration: none;
+      }
+
+      text-align: center;
+      width: 74px;
+      text-align: center;
+      display: inline-block;
+      padding: 15px 0 15px 0;
+
+      & :hover {color: #4183c4;}
+  }
+
+  & .three-numbers {
     border-bottom: 1px solid $lightestgray;
-}
-
-.loc-image {
-    margin: 2px 5px 0 3px;
-}
-
-.clock-image {
-    margin: 3px 5px 0 1px;
-}
-
-.first, .second, .third {
-    & div {
-        font-size: 28px;
-        font-weight: bold;
-        line-height: 1;
-    }
-
-    & a {
-        font-size: 11px;
-        color: #999;
-        text-decoration: none;
-    }
-
-    text-align: center;
-    width: 74px;
-    text-align: center;
-    display: inline-block;
-    padding: 15px 0 15px 0;
-
-    & :hover {
-        color: #4183c4;
-    }
-}
-
-.three-numbers {
-    border-bottom: 1px solid $lightestgray;
-    padding-bottom: 20px;
-
+  }
 }
 
 .col3fourths {
@@ -153,47 +147,53 @@ body {
     width: 730px;
     display: inline-block;
     clear: both;
-}
 
-.repo-tab-content {
-    width: 730px;
-    min-height: 66px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    & .repo-tab-content {
+        width: 730px;
+        min-height: 66px;
 
-.repo-line-top {
-    text-align: left;
-    border-top: 1px solid $lightestgray;
-    padding-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 32px;
-    color: #4183c4;
+        & .repo-line-top {
+            text-align: left;
+            border-top: 1px solid $lightestgray;
+            min-height: 24px;
+            padding: 20px 0 14px 0;
 
-    & .book {
-        margin: 0 15px 58px 6px;
-        float: left;
+            & .book {
+                margin: 0 15px 0 6px;
+                float: left;
+            }
+
+            & .repo-name {
+                float: left;
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 32px;
+                color: #4183c4;
+
+                &:hover {text-decoration: underline;}
+            }
+
+            & .repo-stats div {
+                float: right;
+                font-size: 11px;
+                font-weight: bold;
+                line-height: 20px;
+                color: #666;
+            }
+        }
+
+        & .repo-line-bottom {
+        margin-left: 46px;
+        padding-bottom: 20px;
+
+          & .repo-updated {
+          font-size: 11px;
+          color: #999999;
+          }
+        }
     }
-
-    & .repo-name {
-        float: left;
-    }
-
-    & .repo-stats {
-        float: right;
-    }
 }
 
-.repo-updated {
-    font-size: 11px;
-    color: #999999;
-}
 
-.repo-language {
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 20px;
-    color: #666;
-}
+
 

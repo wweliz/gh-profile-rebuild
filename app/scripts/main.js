@@ -11,6 +11,24 @@ $.getJSON('https://api.github.com/users/wweliz').done(function(data){
   renderHeader(data, $('.sidebar'));
 });
 
+// Sidebar Info ////////////////////////////////////////////////////
+
+var showSidebar = _.template($('.showSidebar').text());
+
+function renderSidebar (data, destination){
+    var rendered = showSidebar(data);
+    destination.prepend(rendered);
+  }
+ 
+$.getJSON('https://api.github.com/users/wweliz').done(function(data){
+  renderSidebar(data, $('.sidebar'));
+});
+
+// Sidebar Hover ////////////////////////////////////////////////////
+$('.b12').click(function() {
+  $('.aBt12').css('color', '#4183c4');
+});
+
 // Repositories ////////////////////////////////////////////////////
 
 var showRepos = _.template($('.showRepos').text());
@@ -29,17 +47,4 @@ function renderRepos (repodata) {
 //fetches the info from my github repo page, once it has all the data, it makes the data available for the renderRepos function
 $.getJSON('https://api.github.com/users/wweliz/repos').done(function(data){
   renderRepos(data);
-});
-
-// Sidebar Info ////////////////////////////////////////////////////
-
-var showSidebar = _.template($('.showSidebar').text());
-
-function renderSidebar (data, destination){
-    var rendered = showSidebar(data);
-    destination.prepend(rendered);
-  }
- 
-$.getJSON('https://api.github.com/users/wweliz').done(function(data){
-  renderSidebar(data, $('.sidebar'));
 });

@@ -9,7 +9,6 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -34,7 +33,9 @@
         <div class="main-container">
             <div class="sidebar"></div>
             <div class="col3fourths">
-                <div class="tab-names"></div>
+                <div class="tab-names">
+                  <img src="images/tabs.png"></img>
+                </div>
                 <div class="repo-tab-content">
 
                 </div>  <!-- closes repoTabContent -->
@@ -53,13 +54,15 @@
               </div>
               <div class="when-joined">
                 <img src="images/clock-icon.png" class="clock-image"></img>
-                <%= created_at %>
+                Joined on <%= moment(created_at).format('MMM DD, YYYY') %>
               </div>
             </div>
             <div class="three-numbers">
               <div class="first">
                 <div class="followers"> <%= followers %> </div>
-                <a href=<%= followers_url %> >Followers</a>
+                <a href='https://github.com/'+<%=login%>+'/followers'>Followers</a>
+
+
               </div>
               <div class="second">
                 <div class="starred"> 1 </div>
@@ -79,13 +82,19 @@
             <div class="repo-name"> <%= name %> </div>  
             <div class="repo-stats">
               <div class="repo-language"> <%= language %> </div>
-              <div class="stars"> <%= stargazers_count %> </div>
-              <div class="forks"> <%= forks_count %> </div>
+              <div class="stars">
+                <img src="images/gray-star-mini.png" class="star-mini"></img>
+                <%= stargazers_count %>
+              </div>
+              <div class="forks">
+                <img src="images/gray-fork-mini.png" class="fork-mini"></img>
+                <%= forks_count %>
+              </div>
             </div>
           </div>
           <div class="repo-line-bottom">
             <div class="repo-description"> <%= description %> </div>
-            <div class="repo-updated"> <%= updated_at %> </div>
+            <div class="repo-updated">Last updated <%= moment(updated_at).format('dddd [at] h:mma') %> </div>
           </div>
         </div>
         </script>
@@ -94,6 +103,7 @@
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/momentjs/moment.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
